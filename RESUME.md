@@ -36,3 +36,7 @@ Como criar a rot
 Utiliza-se o hook useSearchParams o que retorna apenas dados de leitura
 
 as principais funções do hook useSearchParams é o .get() retorna o primeiro valor do parâmetro e o segundo é o .has() que verifica se existe o parâmetro na URL.
+
+## Nested routes
+
+São rotas aninhadas, basically folders within folders

@@ -29,6 +29,13 @@ export default function Home() {
       >
         Página com parâmetros
       </Link>
+
+      <Link
+        href="/products/categories/clothes"
+        className="text-blue-500 hover:text-blue-700 underline text-lg"
+      >
+        Ir a categoria de roupas
+      </Link>
     </main>
   );
 }
