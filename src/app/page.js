@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[var(--font-geist-sans)]">
+    <main className="flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[var(--font-geist-sans)]">
       <h1 className="text-2xl font-bold text-gray-300">Home</h1>
 
       <Link
@@ -12,15 +12,11 @@ export default function Home() {
         Ir para sobre
       </Link>
 
-      <div className="border-separate"></div>
-
-      <h2 className="text-2xl font-bold text-gray-300">Acessar posts</h2>
-
       <Link
         href="/posts"
         className="text-blue-500 hover:text-blue-700 underline text-lg"
       >
-        Posts
+        Ir para os posts
       </Link>
 
       <Link
@@ -35,6 +31,13 @@ export default function Home() {
         className="text-blue-500 hover:text-blue-700 underline text-lg"
       >
         Ir a categoria de roupas
+      </Link>
+
+      <Link
+        href="/dashboard"
+        className="text-blue-500 hover:text-blue-700 underline text-lg"
+      >
+        Ir para a dashboard
       </Link>
     </main>
   );
