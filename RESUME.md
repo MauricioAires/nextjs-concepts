@@ -40,3 +40,14 @@ as principais funções do hook useSearchParams é o .get() retorna o primeiro v
 ## Nested routes
 
 São rotas aninhadas, basically folders within folders
+
+## Definição de layouts
+
+Layout é uma UI compartilha entre múltiplas rotas, os layouts preservam
+o estado e não são re-renderizados, os layouts também podem ser aninhados
+
+## Nesting Layouts
+
+Layouts aninhados, por exemplo layout raiz é o layout de dashboard
+
+Mas somente o layout raiz pode conter as tags body and html.
