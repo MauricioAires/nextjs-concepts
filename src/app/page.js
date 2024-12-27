@@ -1,3 +1,4 @@
+import { ButtonRedirect } from "@/components/ButtonRedirect";
 import Link from "next/link";
 
 export default function Home() {
@@ -39,6 +40,8 @@ export default function Home() {
       >
         Ir para a dashboard
       </Link>
+
+      <ButtonRedirect />
     </main>
   );
 }

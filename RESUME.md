@@ -60,3 +60,9 @@ link e adicionar uma classe CSS condicionalmente
 Enough compare the pathname using the hook usePathname with the href from link and add a CSS class conditionally
 
 Use the usePathname hook to compare the current pathname with the href from a link and conditionally add a CSS class
+
+## What is it for useRouter
+
+é um hook fornecido para manipular navegação e acessar informações da rota atual.
+
+uma navegação Programática oferendo métodos como push, replace e prefetch para controlar a navegação
