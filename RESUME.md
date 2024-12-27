@@ -51,3 +51,12 @@ o estado e não são re-renderizados, os layouts também podem ser aninhados
 Layouts aninhados, por exemplo layout raiz é o layout de dashboard
 
 Mas somente o layout raiz pode conter as tags body and html.
+
+## Como adicionar classe ao link ativo
+
+Basta comparar o pathname utilizando o hook usePathname() com o href do
+link e adicionar uma classe CSS condicionalmente
+
+Enough compare the pathname using the hook usePathname with the href from link and add a CSS class conditionally
+
+Use the usePathname hook to compare the current pathname with the href from a link and conditionally add a CSS class
