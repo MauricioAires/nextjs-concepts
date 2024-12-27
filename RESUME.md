@@ -66,3 +66,25 @@ Use the usePathname hook to compare the current pathname with the href from a li
 é um hook fornecido para manipular navegação e acessar informações da rota atual.
 
 uma navegação Programática oferendo métodos como push, replace e prefetch para controlar a navegação
+
+### Componentes de servidor x use client
+
+#### Servidor
+
+- São executado exclusivamente no servidor
+- Não tem acesso ao window ou document (APIs do navegador)
+- Melhorar a performance reduzindo o javascript enviado
+
+#### Use client
+
+- Precisa do use client
+- Interação dinâmica, acesso a API do navegador e hook
+- Manipulação de eventos
+
+Key difference = Servidor foca em performance inicial e omit dados sensíveis, use client
+possibilita maior interatividade com o cliente
+
+### Componente redirect (Server components)
+
+É uma função que direciona o usuário para outra rota caso ocorra algum erro de carregamento
+ou alguma condição não seja atendida.

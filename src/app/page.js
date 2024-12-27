@@ -42,6 +42,13 @@ export default function Home() {
       </Link>
 
       <ButtonRedirect />
+
+      <Link
+        href="/profile"
+        className="text-blue-500 hover:text-blue-700 underline text-lg"
+      >
+        Ir para meu perfil
+      </Link>
     </main>
   );
 }
