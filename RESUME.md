@@ -88,3 +88,13 @@ possibilita maior interatividade com o cliente
 
 É uma função que direciona o usuário para outra rota caso ocorra algum erro de carregamento
 ou alguma condição não seja atendida.
+
+### Estilização
+
+Principais formas de estilização
+
+- CSS Global
+- CSS Modules
+- Tailwind CSS
+- Sass (mixins) - não é tão utilizado.
+- CSS-in-JS
