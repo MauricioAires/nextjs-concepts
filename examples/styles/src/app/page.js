@@ -1,7 +1,8 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/app/components/Header";
 import S from "./page.module.css";
-import { Container } from "@/components/Container";
-import { Button } from "@/components/Button";
+import { Container } from "@/app/components/Container";
+import { Button } from "@/app/components/Button";
+import { CustomButton } from "./components/CustomButton";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <Container />
 
         <Button />
+
+        <CustomButton>Click here</CustomButton>
       </main>
     </div>
   );

@@ -1,4 +1,4 @@
-import "@/app/css/styles.sass";
+import "@/css/styles.sass";
 
 export const Container = () => {
   return (
