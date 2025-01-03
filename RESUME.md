@@ -98,3 +98,5 @@ Principais formas de estilização
 - Tailwind CSS
 - Sass (mixins) - não é tão utilizado.
 - CSS-in-JS
+
+Para utilizar o tailwind no next basta optar por utilizar no processo de instalação
