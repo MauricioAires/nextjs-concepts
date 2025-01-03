@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import S from "./page.module.css";
+import { Container } from "@/components/Container";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
         </div>
 
         <Header />
+
+        <Container />
       </main>
     </div>
   );
