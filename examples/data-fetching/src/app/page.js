@@ -1,20 +1,10 @@
+import { deleteTodo } from "@/action";
 import { Button } from "@/components/Button";
 import { db } from "@/db";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default async function Home() {
   const todos = await db.todo.findMany();
-
-  async function deleteTodo(formData) {
-    "use server";
-
-    const id = Number(formData.get("id"));
-
-    await db.todo.delete({ where: { id } });
-
-    redirect("/");
-  }
 
   return (
     <main className="container mx-auto p-4">
@@ -39,7 +29,7 @@ export default async function Home() {
                   Visualizar
                 </Link>
                 <Link
-                  href="/"
+                  href={`/todos/${todo.id}/edit`}
                   className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Editar

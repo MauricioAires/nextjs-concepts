@@ -1,27 +1,6 @@
-import { db } from "@/db";
-import { redirect } from "next/navigation";
+import { addTodo } from "@/action";
 
 export default function TodoPage() {
-  // formData => useState
-  const addTodo = async (formData) => {
-    "use server";
-
-    const titulo = formData.get("title");
-    const descricao = formData.get("description");
-    const status = "pendente";
-
-    // As validações deveria ser feitas aqui
-
-    const todo = await db.todo.create({
-      data: {
-        titulo,
-        descricao,
-        status,
-      },
-    });
-
-    redirect("/");
-  };
   return (
     <div className="max-w-md mx-auto mt-10">
       <h1 className="text-2xl font-bold text-center mb-6">Criar nova tarefa</h1>
