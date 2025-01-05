@@ -43,28 +43,35 @@ export async function updateTodo(formState, formData) {
   const id = formData.get("id");
   const titulo = formData.get("title");
   const descricao = formData.get("description");
+  try {
+    if (titulo.length < 5) {
+      return {
+        errors: "O título precisa de pelo menos 5 caracteres.",
+      };
+    }
 
-  if (titulo.length < 5) {
+    if (descricao.length < 10) {
+      return {
+        errors: "A descrição precisa de pelo menos 10 caracteres.",
+      };
+    }
+
+    // throw new Error("Falha ao salvar dados, sistema offline.");
+
+    await db.todo.update({
+      where: {
+        id: Number(id),
+      },
+      data: {
+        titulo,
+        descricao,
+      },
+    });
+
+    redirect("/");
+  } catch (error) {
     return {
-      errors: "O título precisa de pelo menos 5 caracteres.",
+      errors: error.message,
     };
   }
-
-  if (descricao.length < 10) {
-    return {
-      errors: "A descrição precisa de pelo menos 10 caracteres.",
-    };
-  }
-
-  await db.todo.update({
-    where: {
-      id: Number(id),
-    },
-    data: {
-      titulo,
-      descricao,
-    },
-  });
-
-  redirect("/");
 }
