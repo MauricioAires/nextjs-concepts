@@ -3,6 +3,12 @@ import { Button } from "@/components/Button";
 import { db } from "@/db";
 import Link from "next/link";
 
+// Definindo o tempo de revalidação da pagina em cache
+// export const revalidate = 20; // 20 seconds
+
+// Desativando o cache da página
+// export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const todos = await db.todo.findMany();
 

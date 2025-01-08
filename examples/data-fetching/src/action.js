@@ -2,12 +2,18 @@
 
 import { redirect } from "next/navigation";
 import { db } from "./db";
+import { revalidatePath } from "next/cache";
 
 export async function deleteTodo(formData) {
   const id = Number(formData.get("id"));
 
   await db.todo.delete({ where: { id } });
 
+  // Perfect -> revalida a pagina! de forma manually,não é por tempo e nem é
+  // removido 100%
+  revalidatePath("/");
+
+  // Funciona com um return então nada funciona depois dele
   redirect("/");
 }
 
