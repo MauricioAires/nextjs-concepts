@@ -2,11 +2,9 @@ import { findTodoById } from "@/action";
 import { TodoForm } from "@/components/TodoForm";
 
 export default async function TodoEdit({ params }) {
-  const id = await params.id;
+  const { id } = await params;
 
   const todo = await findTodoById(Number(id));
-
-  console.log(todo);
 
   return (
     <div className="max-w-md mx-auto mt-10">
