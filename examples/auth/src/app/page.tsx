@@ -6,6 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-24">
       <Link href="/client">Página com client component</Link>
       <Link href="/server">Página com server component</Link>
+      <Link href="/middleware">Página com middleware</Link>
     </main>
   );
 }
